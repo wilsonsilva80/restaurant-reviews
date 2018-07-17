@@ -26,7 +26,7 @@ if('serviceWorker' in navigator){
 
 
  self.addEventListener('fetch', function(e){
- 	e.respondWith(caches.match(e.request).then(function(){
+ 	e.respondWith(caches.match(e.request).then(function(response){
  		if(response){
  			return response
  		} else {
